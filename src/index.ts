@@ -1,7 +1,9 @@
 import { Game, Types } from "phaser";
 import { StartGame } from "./scenes";
+import { About } from "./scenes/About";
+
 const gameConfig: Types.Core.GameConfig = {
-    title: "Phaser game tutorial",
+    title: "Phaser game",
     type: Phaser.AUTO,
     backgroundColor: "#000",
     width: 800,
@@ -20,7 +22,7 @@ const gameConfig: Types.Core.GameConfig = {
     audio: {
         disableWebAudio: false,
     },
-    scene: [StartGame],
+    scene: [StartGame, About],
 };
 
 window.game = new Game(gameConfig);
